@@ -14,7 +14,7 @@ struct MainNavigator: View {
 
     var body: some View {
         NavigationView {
-            Text("Home Screen")
+            HomeScreen()
                 .navigationTitle(title)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -26,7 +26,7 @@ struct MainNavigator: View {
                     }
                 }
         }.sheet(isPresented: $showAccountBottomSheet) {
-            Text("Account Information")
+            AccountScreen()
         }
     }
 }
