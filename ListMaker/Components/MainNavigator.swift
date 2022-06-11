@@ -30,8 +30,12 @@ struct MainNavigator: View {
                         Button {
                             showNewListBottomSheet.toggle()
                         } label: {
-                            Image(systemName: "plus.circle")
-                                .imageScale(.large)
+                            HStack {
+                                Image(systemName: "plus.circle")
+                                    .imageScale(.large)
+                                Text("New List")
+                            }
+
                         }.buttonStyle(.plain)
                     }
                 }
