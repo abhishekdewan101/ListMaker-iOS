@@ -13,6 +13,7 @@
 		614896B6284F1702009C2960 /* ListMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614896B5284F1702009C2960 /* ListMakerApp.swift */; };
 		614896BA284F1705009C2960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614896B9284F1705009C2960 /* Assets.xcassets */; };
 		614896BD284F1705009C2960 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614896BC284F1705009C2960 /* Preview Assets.xcassets */; };
+		6181E57A28545AF30030B8FE /* NewListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6181E57928545AF30030B8FE /* NewListScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		614896B5284F1702009C2960 /* ListMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMakerApp.swift; sourceTree = "<group>"; };
 		614896B9284F1705009C2960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		614896BC284F1705009C2960 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6181E57928545AF30030B8FE /* NewListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			children = (
 				61277BF028530FF1005F54B1 /* HomeScreen.swift */,
 				61277BF22853101A005F54B1 /* AccountScreen.swift */,
+				6181E57928545AF30030B8FE /* NewListScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6181E57A28545AF30030B8FE /* NewListScreen.swift in Sources */,
 				61277BEE28530B72005F54B1 /* MainNavigator.swift in Sources */,
 				614896B6284F1702009C2960 /* ListMakerApp.swift in Sources */,
 				61277BF128530FF1005F54B1 /* HomeScreen.swift in Sources */,
