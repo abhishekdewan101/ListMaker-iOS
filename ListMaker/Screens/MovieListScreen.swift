@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MovieListScreen: View {
-    var list: List
+    var list: ListModel
 
     var body: some View {
-        Text("Hello from the movie list screen of \(list.id)")
-            .navigationTitle(list.title)
+        Text("Hello from the movie list screen of \(list.id ?? UUID())")
+            .navigationTitle(list.title ?? "Untitled list")
             .navigationBarTitleDisplayMode(.inline)
     }
 }

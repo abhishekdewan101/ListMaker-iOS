@@ -8,13 +8,14 @@
 import Foundation
 import SwiftUI
 
-enum ListType {
-    case games
-    case movies
+enum ListType: String, CaseIterable {
+    case Games
+    case Movies
+    case Books
 }
 
-struct List: Hashable {
-    let title: String
-    let type: ListType
-    let id: UUID
+extension String {
+    func getListType() -> ListType? {
+        return ListType(rawValue: self)
+    }
 }

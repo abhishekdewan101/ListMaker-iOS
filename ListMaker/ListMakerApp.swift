@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ListMakerApp: App {
+    @StateObject private var dataController = DataController()
+
     var body: some Scene {
         WindowGroup {
             MainNavigator(title: "ListMaker")
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
