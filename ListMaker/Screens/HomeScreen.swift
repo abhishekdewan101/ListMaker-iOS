@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @StateObject private var viewModel = HomeScreenViewModel()
+
+    private let twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
+
     var body: some View {
-        Text("Hello from the Home Screen")
+        SwiftUI.List {
+            ForEach(viewModel.lists, id: \.self) { list in
+                NavigationLink {
+                    switch list.type {
+                    case .games:
+                        GameListScreen(list: list)
+                    case .movies:
+                        MovieListScreen(list: list)
+                    }
+                } label: {
+                    Text(list.title)
+                }
+            }
+        }.padding(.top)
     }
 }
 
