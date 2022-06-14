@@ -10,7 +10,7 @@
 		61277BEE28530B72005F54B1 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61277BED28530B72005F54B1 /* MainNavigator.swift */; };
 		61277BF128530FF1005F54B1 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61277BF028530FF1005F54B1 /* HomeScreen.swift */; };
 		61277BF32853101A005F54B1 /* AccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61277BF22853101A005F54B1 /* AccountScreen.swift */; };
-		6145235D2855380B007CF49C /* BaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145235C2855380B007CF49C /* BaseModels.swift */; };
+		6145235D2855380B007CF49C /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145235C2855380B007CF49C /* ListType.swift */; };
 		6145235F28554116007CF49C /* GameListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145235E28554116007CF49C /* GameListScreen.swift */; };
 		6145236128554304007CF49C /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145236028554304007CF49C /* MovieListScreen.swift */; };
 		614523642855A711007CF49C /* ListsDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 614523622855A711007CF49C /* ListsDB.xcdatamodeld */; };
@@ -19,13 +19,17 @@
 		614896BA284F1705009C2960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614896B9284F1705009C2960 /* Assets.xcassets */; };
 		614896BD284F1705009C2960 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614896BC284F1705009C2960 /* Preview Assets.xcassets */; };
 		6181E57A28545AF30030B8FE /* NewListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6181E57928545AF30030B8FE /* NewListScreen.swift */; };
+		618EDDF62856FD130029C35E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDDF52856FD130029C35E /* Authentication.swift */; };
+		618EDDFF28584E2C0029C35E /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDDFE28584E2C0029C35E /* AuthenticationRepository.swift */; };
+		618EDE0128584F9B0029C35E /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDE0028584F9B0029C35E /* AuthenticationService.swift */; };
+		618EDE09285855D80029C35E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDE08285855D80029C35E /* DIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61277BED28530B72005F54B1 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		61277BF028530FF1005F54B1 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		61277BF22853101A005F54B1 /* AccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountScreen.swift; sourceTree = "<group>"; };
-		6145235C2855380B007CF49C /* BaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModels.swift; sourceTree = "<group>"; };
+		6145235C2855380B007CF49C /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
 		6145235E28554116007CF49C /* GameListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListScreen.swift; sourceTree = "<group>"; };
 		6145236028554304007CF49C /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
 		614523632855A711007CF49C /* Lists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lists.xcdatamodel; sourceTree = "<group>"; };
@@ -35,6 +39,10 @@
 		614896B9284F1705009C2960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		614896BC284F1705009C2960 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6181E57928545AF30030B8FE /* NewListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListScreen.swift; sourceTree = "<group>"; };
+		618EDDF52856FD130029C35E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		618EDDFE28584E2C0029C35E /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		618EDE0028584F9B0029C35E /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		618EDE08285855D80029C35E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +67,11 @@
 		61277BEF28530FE2005F54B1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				61277BF028530FF1005F54B1 /* HomeScreen.swift */,
-				61277BF22853101A005F54B1 /* AccountScreen.swift */,
-				6181E57928545AF30030B8FE /* NewListScreen.swift */,
-				6145235E28554116007CF49C /* GameListScreen.swift */,
-				6145236028554304007CF49C /* MovieListScreen.swift */,
+				618EDE072858552F0029C35E /* Movie+List */,
+				618EDE06285855260029C35E /* Game+List */,
+				618EDE05285855140029C35E /* New+List */,
+				618EDE04285855080029C35E /* Account */,
+				618EDE03285854F70029C35E /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -71,7 +79,8 @@
 		6145235B285537F7007CF49C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6145235C2855380B007CF49C /* BaseModels.swift */,
+				618EDDF52856FD130029C35E /* Authentication.swift */,
+				6145235C2855380B007CF49C /* ListType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,7 +104,10 @@
 		614896B4284F1702009C2960 /* ListMaker */ = {
 			isa = PBXGroup;
 			children = (
+				618EDE022858549F0029C35E /* DI */,
 				6145235B285537F7007CF49C /* Models */,
+				618EDDFD28584E150029C35E /* Services */,
+				618EDDFC28584DCE0029C35E /* Repositories */,
 				61277BEF28530FE2005F54B1 /* Screens */,
 				61277BEC28530B48005F54B1 /* Components */,
 				614896B5284F1702009C2960 /* ListMakerApp.swift */,
@@ -113,6 +125,70 @@
 				614896BC284F1705009C2960 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		618EDDFC28584DCE0029C35E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				618EDDFE28584E2C0029C35E /* AuthenticationRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		618EDDFD28584E150029C35E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				618EDE0028584F9B0029C35E /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		618EDE022858549F0029C35E /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				618EDE08285855D80029C35E /* DIContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		618EDE03285854F70029C35E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				61277BF028530FF1005F54B1 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		618EDE04285855080029C35E /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				61277BF22853101A005F54B1 /* AccountScreen.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		618EDE05285855140029C35E /* New+List */ = {
+			isa = PBXGroup;
+			children = (
+				6181E57928545AF30030B8FE /* NewListScreen.swift */,
+			);
+			path = "New+List";
+			sourceTree = "<group>";
+		};
+		618EDE06285855260029C35E /* Game+List */ = {
+			isa = PBXGroup;
+			children = (
+				6145235E28554116007CF49C /* GameListScreen.swift */,
+			);
+			path = "Game+List";
+			sourceTree = "<group>";
+		};
+		618EDE072858552F0029C35E /* Movie+List */ = {
+			isa = PBXGroup;
+			children = (
+				6145236028554304007CF49C /* MovieListScreen.swift */,
+			);
+			path = "Movie+List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,16 +261,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				618EDE09285855D80029C35E /* DIContainer.swift in Sources */,
 				6181E57A28545AF30030B8FE /* NewListScreen.swift in Sources */,
 				61277BEE28530B72005F54B1 /* MainNavigator.swift in Sources */,
 				614896B6284F1702009C2960 /* ListMakerApp.swift in Sources */,
 				61277BF128530FF1005F54B1 /* HomeScreen.swift in Sources */,
 				614523662855A93B007CF49C /* DataController.swift in Sources */,
+				618EDDFF28584E2C0029C35E /* AuthenticationRepository.swift in Sources */,
 				6145236128554304007CF49C /* MovieListScreen.swift in Sources */,
 				6145235F28554116007CF49C /* GameListScreen.swift in Sources */,
+				618EDDF62856FD130029C35E /* Authentication.swift in Sources */,
 				614523642855A711007CF49C /* ListsDB.xcdatamodeld in Sources */,
 				61277BF32853101A005F54B1 /* AccountScreen.swift in Sources */,
-				6145235D2855380B007CF49C /* BaseModels.swift in Sources */,
+				6145235D2855380B007CF49C /* ListType.swift in Sources */,
+				618EDE0128584F9B0029C35E /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

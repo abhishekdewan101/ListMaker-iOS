@@ -15,6 +15,13 @@ struct ListMakerApp: App {
         WindowGroup {
             MainNavigator(title: "ListMaker")
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+                .onAppear {
+                    setupDependencyInjection()
+                }
         }
+    }
+
+    private func setupDependencyInjection() {
+        DIContainer.shared.register(type: AuthenticationRepository.self, component: AuthenticationRepositoryImpl(authenticationService: AuthenticationServiceImpl()))
     }
 }
