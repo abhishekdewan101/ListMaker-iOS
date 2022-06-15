@@ -22,7 +22,8 @@
 		618EDDF62856FD130029C35E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDDF52856FD130029C35E /* Authentication.swift */; };
 		618EDDFF28584E2C0029C35E /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDDFE28584E2C0029C35E /* AuthenticationRepository.swift */; };
 		618EDE0128584F9B0029C35E /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDE0028584F9B0029C35E /* AuthenticationService.swift */; };
-		618EDE09285855D80029C35E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDE08285855D80029C35E /* DIContainer.swift */; };
+		61E36DB228599923008FDA54 /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E36DB128599923008FDA54 /* GameListViewModel.swift */; };
+		61E36DB628599CB6008FDA54 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E36DB528599CB6008FDA54 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,8 @@
 		618EDDF52856FD130029C35E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		618EDDFE28584E2C0029C35E /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		618EDE0028584F9B0029C35E /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
-		618EDE08285855D80029C35E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		61E36DB128599923008FDA54 /* GameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
+		61E36DB528599CB6008FDA54 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		61277BEF28530FE2005F54B1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				61E36DB328599C9A008FDA54 /* Splash */,
 				618EDE072858552F0029C35E /* Movie+List */,
 				618EDE06285855260029C35E /* Game+List */,
 				618EDE05285855140029C35E /* New+List */,
@@ -104,7 +107,6 @@
 		614896B4284F1702009C2960 /* ListMaker */ = {
 			isa = PBXGroup;
 			children = (
-				618EDE022858549F0029C35E /* DI */,
 				6145235B285537F7007CF49C /* Models */,
 				618EDDFD28584E150029C35E /* Services */,
 				618EDDFC28584DCE0029C35E /* Repositories */,
@@ -143,14 +145,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		618EDE022858549F0029C35E /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				618EDE08285855D80029C35E /* DIContainer.swift */,
-			);
-			path = DI;
-			sourceTree = "<group>";
-		};
 		618EDE03285854F70029C35E /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				6145235E28554116007CF49C /* GameListScreen.swift */,
+				61E36DB128599923008FDA54 /* GameListViewModel.swift */,
 			);
 			path = "Game+List";
 			sourceTree = "<group>";
@@ -189,6 +184,14 @@
 				6145236028554304007CF49C /* MovieListScreen.swift */,
 			);
 			path = "Movie+List";
+			sourceTree = "<group>";
+		};
+		61E36DB328599C9A008FDA54 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				61E36DB528599CB6008FDA54 /* SplashScreen.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,13 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				618EDE09285855D80029C35E /* DIContainer.swift in Sources */,
 				6181E57A28545AF30030B8FE /* NewListScreen.swift in Sources */,
 				61277BEE28530B72005F54B1 /* MainNavigator.swift in Sources */,
 				614896B6284F1702009C2960 /* ListMakerApp.swift in Sources */,
 				61277BF128530FF1005F54B1 /* HomeScreen.swift in Sources */,
+				61E36DB228599923008FDA54 /* GameListViewModel.swift in Sources */,
 				614523662855A93B007CF49C /* DataController.swift in Sources */,
 				618EDDFF28584E2C0029C35E /* AuthenticationRepository.swift in Sources */,
+				61E36DB628599CB6008FDA54 /* SplashScreen.swift in Sources */,
 				6145236128554304007CF49C /* MovieListScreen.swift in Sources */,
 				6145235F28554116007CF49C /* GameListScreen.swift in Sources */,
 				618EDDF62856FD130029C35E /* Authentication.swift in Sources */,

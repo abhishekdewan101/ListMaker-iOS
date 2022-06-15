@@ -7,31 +7,35 @@
 
 import Foundation
 
-protocol AuthenticationRepository {
-    var currentAuthentication: Authentication? { get }
-    mutating func getCurrentAuthentication() async
-}
-
-struct AuthenticationRepositoryImpl: AuthenticationRepository {
-    var currentAuthentication: Authentication?
+class AuthenticationRepository: ObservableObject {
+    @Published var currentAuthentication: Authentication?
     private var authenticationService: AuthenticationService
     private var userDefaults: UserDefaults
     private var userDefaultKey = "current_authentication"
 
-    init(authenticationService: AuthenticationService = AuthenticationServiceImpl()) {
+    static let shared: AuthenticationRepository = {
+        let instance = AuthenticationRepository(authenticationService: AuthenticationService())
+        // setup code
+        return instance
+    }()
+
+    private init(authenticationService: AuthenticationService = AuthenticationService()) {
         self.authenticationService = authenticationService
         self.currentAuthentication = nil
         self.userDefaults = UserDefaults.standard
+        Task {
+            await getCurrentAuthentication()
+        }
     }
 
-    mutating func getCurrentAuthentication() async {
+    func getCurrentAuthentication() async {
         let storedAuthentication = userDefaults.string(forKey: userDefaultKey)
         do {
             if storedAuthentication != nil {
                 currentAuthentication = try parseStoredAuthentication(storedAuth: storedAuthentication!)
             } else {
                 let auth = try await authenticationService.getAuthenticationData()
-                let authString = try JSONEncoder().encode(auth)
+                let authString = try String(decoding: JSONEncoder().encode(auth), as: UTF8.self)
                 userDefaults.set(authString, forKey: userDefaultKey)
                 currentAuthentication = auth
             }

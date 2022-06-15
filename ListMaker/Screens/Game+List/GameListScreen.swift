@@ -11,6 +11,7 @@ struct GameListScreen: View {
     var list: ListModel
     @FetchRequest var entries: FetchedResults<ListEntry>
     @Environment(\.managedObjectContext) var moc
+    @State private var viewModel = GameListViewModel()
 
     init(list: ListModel) {
         _entries = FetchRequest<ListEntry>(sortDescriptors: [],

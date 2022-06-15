@@ -7,11 +7,7 @@
 
 import Foundation
 
-protocol AuthenticationService {
-    func getAuthenticationData() async throws -> Authentication
-}
-
-struct AuthenticationServiceImpl: AuthenticationService {
+struct AuthenticationService {
     func getAuthenticationData() async throws -> Authentication {
         guard let url = URL(string: "https://px058nbguc.execute-api.us-east-1.amazonaws.com/default/authentication") else {
             throw AuthenticationError.invalidURL
