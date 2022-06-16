@@ -11,10 +11,10 @@ protocol AuthenticationService {
     func getAuthenticationData() async throws -> Authentication
 }
 
-struct AuthenticationServiceImpl : AuthenticationService {
+struct AuthenticationServiceImpl: AuthenticationService {
     func getAuthenticationData() async throws -> Authentication {
         guard let url = URL(string: "https://px058nbguc.execute-api.us-east-1.amazonaws.com/default/authentication") else {
-            throw AuthenticationError.invalidURL
+            throw URLError(.badURL)
         }
         let (data, _) = try await URLSession.shared.data(from: url)
 
