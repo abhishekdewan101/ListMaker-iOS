@@ -23,6 +23,14 @@ struct GameListScreen: View {
         Text("Hello from the game list screen of \(list.id ?? UUID())")
             .navigationTitle(list.title ?? "Untitled")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Button {} label: {
+                        Image(systemName: "plus.circle")
+                            .imageScale(.large)
+                    }.buttonStyle(.plain)
+                }
+            }
 
         Text("Size of the payload \(entries.count)")
     }
