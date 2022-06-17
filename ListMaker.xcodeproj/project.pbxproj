@@ -20,6 +20,7 @@
 		614896BD284F1705009C2960 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614896BC284F1705009C2960 /* Preview Assets.xcassets */; };
 		6150198C285AE3B200C1B360 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6150198B285AE3B200C1B360 /* Game.swift */; };
 		61501990285AE62E00C1B360 /* GameDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6150198F285AE62E00C1B360 /* GameDetailService.swift */; };
+		61501992285C328000C1B360 /* GameSearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61501991285C328000C1B360 /* GameSearchScreen.swift */; };
 		6181E57A28545AF30030B8FE /* NewListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6181E57928545AF30030B8FE /* NewListScreen.swift */; };
 		618EDDF62856FD130029C35E /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDDF52856FD130029C35E /* Authentication.swift */; };
 		618EDDFF28584E2C0029C35E /* GameAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EDDFE28584E2C0029C35E /* GameAuthenticationRepository.swift */; };
@@ -43,6 +44,7 @@
 		614896BC284F1705009C2960 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6150198B285AE3B200C1B360 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		6150198F285AE62E00C1B360 /* GameDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailService.swift; sourceTree = "<group>"; };
+		61501991285C328000C1B360 /* GameSearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSearchScreen.swift; sourceTree = "<group>"; };
 		6181E57928545AF30030B8FE /* NewListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListScreen.swift; sourceTree = "<group>"; };
 		618EDDF52856FD130029C35E /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		618EDDFE28584E2C0029C35E /* GameAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAuthenticationRepository.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				6145235E28554116007CF49C /* GameListScreen.swift */,
 				61E36DB128599923008FDA54 /* GameListViewModel.swift */,
+				61501991285C328000C1B360 /* GameSearchScreen.swift */,
 			);
 			path = "Game+List";
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				6181E57A28545AF30030B8FE /* NewListScreen.swift in Sources */,
 				61277BEE28530B72005F54B1 /* MainNavigator.swift in Sources */,
 				614896B6284F1702009C2960 /* ListMakerApp.swift in Sources */,
+				61501992285C328000C1B360 /* GameSearchScreen.swift in Sources */,
 				61277BF128530FF1005F54B1 /* HomeScreen.swift in Sources */,
 				61E36DB228599923008FDA54 /* GameListViewModel.swift in Sources */,
 				614523662855A93B007CF49C /* DataController.swift in Sources */,

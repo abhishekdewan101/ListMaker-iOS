@@ -10,6 +10,7 @@ import Foundation
 
 class GameListViewModel: ObservableObject {
     @Published var gameAuthenticationRepository: GameAuthenticationRepository
+    @Published var searchResults:[Game] = []
     private var gameDetailService: GameDetailService
     var anyCancellable: AnyCancellable?
 
@@ -17,15 +18,24 @@ class GameListViewModel: ObservableObject {
         self.gameAuthenticationRepository = gameAuthenticationRepository
         self.gameDetailService = gameDetailService
 
-        anyCancellable = self.gameAuthenticationRepository.$activeAuthToken.sink { auth in
-            if !auth.isEmpty {
-                Task {
-                    let games = try! await gameDetailService.getGamesFor(search: "Batman", withToken: auth)
-                    games.forEach { game in
-                        print(game.name)
-                    }
+        anyCancellable = self.gameAuthenticationRepository.$activeAuthToken.sink { _ in
+        }
+    }
+
+    func searchGames(search: String) {
+        Task {
+            do {
+                let games = try await gameDetailService.getGamesFor(search: search, withToken: gameAuthenticationRepository.activeAuthToken)
+                await MainActor.run {
+                    searchResults = games
                 }
+            } catch {
+                print(error)
             }
         }
+    }
+    
+    func clearSearchResults() {
+        searchResults = []
     }
 }

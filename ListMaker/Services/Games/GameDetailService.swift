@@ -22,7 +22,7 @@ struct GameDetailServiceImpl: GameDetailService {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
 
         request.httpMethod = "POST"
-        request.httpBody = "f  name, cover.image_id; w slug = \(id)".data(using: .utf8)
+        request.httpBody = "f  name, cover.image_id; w slug = \(id) & category=0".data(using: .utf8)
 
         request.addValue("c48izyt9768kq3uqhsv2upllsqmtc4", forHTTPHeaderField: "Client-ID")
         request.addValue("Bearer \(withToken)", forHTTPHeaderField: "Authorization")
@@ -41,7 +41,7 @@ struct GameDetailServiceImpl: GameDetailService {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
 
         request.httpMethod = "POST"
-        request.httpBody = "f slug, name,cover.image_id; search \"\(search)\"; l 50;".data(using: .utf8)
+        request.httpBody = "f slug, name,cover.image_id; w category=0; search \"\(search)\"; l 50;".data(using: .utf8)
 
         request.addValue("c48izyt9768kq3uqhsv2upllsqmtc4", forHTTPHeaderField: "Client-ID")
         request.addValue("Bearer \(withToken)", forHTTPHeaderField: "Authorization")
