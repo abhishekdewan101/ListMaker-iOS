@@ -18,9 +18,11 @@ class MovieListViewModel: ObservableObject {
     func searchForMovies(searchTerm: String) {
         Task {
             do {
-                let results = try await movieRepository.searchForMovies(searchTerm: searchTerm)
-                print(results)
-                searchResults = results.results
+                let urlEncodedSearch = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+                let results = try await movieRepository.searchForMovies(searchTerm: urlEncodedSearch)
+                await MainActor.run {
+                    searchResults = results.results
+                }
             } catch {
                 print(error)
             }

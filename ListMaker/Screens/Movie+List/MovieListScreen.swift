@@ -65,9 +65,9 @@ struct MovieListScreen: View {
             MovieSearchScreen(viewModel: viewModel) { movie in
                 let listItem = ListEntry(context: moc)
                 listItem.id = UUID()
-                listItem.body = movie.title
+                listItem.body = movie.title ?? movie.name ?? "Untitled"
                 listItem.image = movie.quailifiedPosterPath
-                listItem.listId = listItem.id
+                listItem.listId = list.id
                 try! moc.save()
                 showAddMovieSheet.toggle()
             }

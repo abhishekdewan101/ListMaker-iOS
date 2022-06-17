@@ -26,7 +26,10 @@ struct MovieSearchScreen: View {
             .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).foregroundColor(Color.white))
             ScrollView {
                 LazyVStack {
-                    ForEach(viewModel.searchResults, id: \.id) { movie in
+                    let filteredResults = viewModel.searchResults.filter { movie in
+                        movie.posterPath != nil
+                    }
+                    ForEach(filteredResults, id: \.id) { movie in
                         MovieListItem(movie: movie, onTap: onSaveMovie)
                     }
                 }
@@ -65,14 +68,14 @@ private struct MovieListItem: View {
 
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: movie.quailifiedPosterPath)) { image in
+            AsyncImage(url: URL(string: movie.quailifiedPosterPath!)) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()
             }
             .frame(width: 64, height: 100)
             .clipShape(RoundedRectangle(cornerRadius: 10))
-            Text(movie.title).font(.body).lineLimit(2)
+            Text(movie.title ?? movie.name ?? "Untitled").font(.body).lineLimit(2)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .onTapGesture {

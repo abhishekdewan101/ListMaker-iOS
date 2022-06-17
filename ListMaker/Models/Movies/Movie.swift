@@ -12,11 +12,12 @@ struct MovieList : Decodable {
 }
 
 struct Movie : Decodable {
-    let title: String
-    let posterPath: String
+    let title: String?
+    let posterPath: String?
     let id: Int
+    let name: String?
     
-    var quailifiedPosterPath: String {
-        "https://image.tmdb.org/t/p/w500/\(posterPath)"
+    var quailifiedPosterPath: String? {
+        "https://image.tmdb.org/t/p/w500/\(posterPath ?? "")"
     }
 }
