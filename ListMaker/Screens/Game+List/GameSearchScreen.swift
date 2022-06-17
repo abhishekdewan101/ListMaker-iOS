@@ -19,15 +19,9 @@ struct GameSearchScreen: View {
 
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                TextField("Search games...", text: $searchTerm)
-                    .foregroundColor(Color.white)
-                    .font(.body)
-                    .onSubmit {
-                        viewModel.searchGames(search: searchTerm)
-                    }
-            }
+            SearchBar(searchTerm: $searchTerm, onSubmit: { searchTerm in
+                viewModel.searchGames(search: searchTerm)
+            })
             .padding()
             .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).foregroundColor(Color.white))
             ScrollView {
@@ -48,6 +42,23 @@ struct GameSearchScreen: View {
             searchTerm = ""
         }
         .padding()
+    }
+}
+
+private struct SearchBar: View {
+    var searchTerm: Binding<String>
+    var onSubmit: (String) -> Void
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+            TextField("Search games...", text: searchTerm)
+                .foregroundColor(Color.white)
+                .font(.body)
+                .onSubmit {
+                    onSubmit(searchTerm.wrappedValue)
+                }
+        }
     }
 }
 
