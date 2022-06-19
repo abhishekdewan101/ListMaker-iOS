@@ -10,8 +10,6 @@ import SwiftUI
 struct HomeScreen: View {
     @FetchRequest(sortDescriptors: []) var lists: FetchedResults<ListModel>
 
-    private let twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
-
     var body: some View {
         List {
             ForEach(lists, id: \.self) { list in

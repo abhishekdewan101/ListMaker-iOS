@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		61277BEE28530B72005F54B1 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61277BED28530B72005F54B1 /* MainNavigator.swift */; };
 		61277BF128530FF1005F54B1 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61277BF028530FF1005F54B1 /* HomeScreen.swift */; };
-		61277BF32853101A005F54B1 /* AccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61277BF22853101A005F54B1 /* AccountScreen.swift */; };
 		6145235D2855380B007CF49C /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145235C2855380B007CF49C /* ListType.swift */; };
 		6145235F28554116007CF49C /* GameListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145235E28554116007CF49C /* GameListScreen.swift */; };
 		6145236128554304007CF49C /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145236028554304007CF49C /* MovieListScreen.swift */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		61277BED28530B72005F54B1 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		61277BF028530FF1005F54B1 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		61277BF22853101A005F54B1 /* AccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountScreen.swift; sourceTree = "<group>"; };
 		6145235C2855380B007CF49C /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
 		6145235E28554116007CF49C /* GameListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListScreen.swift; sourceTree = "<group>"; };
 		6145236028554304007CF49C /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				618EDE072858552F0029C35E /* Movie+List */,
 				618EDE06285855260029C35E /* Game+List */,
 				618EDE05285855140029C35E /* New+List */,
-				618EDE04285855080029C35E /* Account */,
 				618EDE03285854F70029C35E /* Home */,
 			);
 			path = Screens;
@@ -191,14 +188,6 @@
 				61277BF028530FF1005F54B1 /* HomeScreen.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		618EDE04285855080029C35E /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				61277BF22853101A005F54B1 /* AccountScreen.swift */,
-			);
-			path = Account;
 			sourceTree = "<group>";
 		};
 		618EDE05285855140029C35E /* New+List */ = {
@@ -343,7 +332,6 @@
 				61E53689285CE1C6006399FC /* EmptyListView.swift in Sources */,
 				61E53683285CDC52006399FC /* MovieService.swift in Sources */,
 				614523642855A711007CF49C /* ListsDB.xcdatamodeld in Sources */,
-				61277BF32853101A005F54B1 /* AccountScreen.swift in Sources */,
 				6145235D2855380B007CF49C /* ListType.swift in Sources */,
 				618EDE0128584F9B0029C35E /* AuthenticationService.swift in Sources */,
 				6150198C285AE3B200C1B360 /* Game.swift in Sources */,

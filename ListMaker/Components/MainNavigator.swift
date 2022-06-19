@@ -10,7 +10,6 @@ import SwiftUI
 struct MainNavigator: View {
     var title: String
 
-    @State private var showAccountBottomSheet = false
     @State private var showNewListBottomSheet = false
 
     var body: some View {
@@ -19,12 +18,7 @@ struct MainNavigator: View {
                 .navigationTitle(title)
                 .toolbar {
                     ToolbarItem(placement: .bottomBar) {
-                        Button {
-                            showAccountBottomSheet.toggle()
-                        } label: {
-                            Image(systemName: "person.fill")
-                                .imageScale(.large)
-                        }.buttonStyle(.plain)
+                        Spacer()
                     }
                     ToolbarItem(placement: .bottomBar) {
                         Button {
@@ -35,8 +29,6 @@ struct MainNavigator: View {
                         }.buttonStyle(.plain)
                     }
                 }
-        }.sheet(isPresented: $showAccountBottomSheet) {
-            AccountScreen()
         }.sheet(isPresented: $showNewListBottomSheet) {
             NewListScreen()
         }
